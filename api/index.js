@@ -2,7 +2,7 @@
 
 // Router = express.Router
 // import {Router} from 'express';
-const {Router} = require('express');
+const Router = require('express').Router;
 const bodyParser = require('body-parser');
 
 const apiRoutes = new Router();
@@ -13,6 +13,8 @@ const users = require('./controllers/users');
 
 // autres routes
 // apiRoutes.post
+//localhost:3000/api/users
 apiRoutes.get('/users', users.find);
+apiRoutes.post('/users', users.create);
 
 module.exports = apiRoutes;
