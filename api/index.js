@@ -11,9 +11,6 @@ apiRoutes.use(bodyParser.json());
 
 const users = require('./controllers/users');
 
-// autres routes
-// apiRoutes.post
-//localhost:3000/api/users
 apiRoutes.get('/users', users.find);
 apiRoutes.post('/users', users.create);
 

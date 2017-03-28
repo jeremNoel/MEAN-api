@@ -1,8 +1,6 @@
 'use strict';
 
 const Users = require('../../database').users;
-const Comments = require('../../database').comments;
-const Shops = require('../../database').shops;
 
 const users = {
   find : (req, res) => {
