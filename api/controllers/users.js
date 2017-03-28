@@ -1,11 +1,11 @@
 'use strict';
 
-const Users = require('../../database').users;
+const UserModel = require('../../database').users;
 
-const users = {
+const userController = {
   find : (req, res) => {
     //recette/operation sur la base de données
-    Users.find()
+    UserModel.find()
     .then( data => {
       res.send('Operation success ::: ' + data);
     })
@@ -15,8 +15,8 @@ const users = {
   },
 
   create : (req, res) => {
-    const user = new Users(req.body);
-    user.save()
+    const newUser = new UserModel(req.body);
+    newUser.save()
     .then( data => {
       res.send('Operation success ::: ' + data);
     })
@@ -27,4 +27,4 @@ const users = {
 
 }
 
-module.exports = users;
+module.exports = userController;

@@ -9,9 +9,13 @@ const apiRoutes = new Router();
 apiRoutes.use(bodyParser.urlencoded({extended: false}));
 apiRoutes.use(bodyParser.json());
 
-const users = require('./controllers/users');
+const userController = require('./controllers/users');
+const products = require('./controllers/products');
 
-apiRoutes.get('/users', users.find);
-apiRoutes.post('/users', users.create);
+apiRoutes.get('/users', userController.find);
+apiRoutes.post('/users', userController.create);
+
+
+apiRoutes.get('/products', products.find);
 
 module.exports = apiRoutes;

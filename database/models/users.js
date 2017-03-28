@@ -2,7 +2,7 @@
 
 const Schema = require('mongoose').Schema;
 
-const Users = new Schema({
+const UserSchema = new Schema({
   mail: {
     type: String,
     lowercase: true,
