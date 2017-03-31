@@ -13,18 +13,9 @@ const userController = {
       res.send('Operation failed ::: ' + err);
     });
   },
-
-  create : (req, res) => {
-    const newUser = new UserModel(req.body);
-    newUser.save()
-    .then( data => {
-      res.send('Operation success ::: ' + data);
-    })
-    .catch( err => {
-      res.send('Operation failed ::: ' + err);
-    });
+  actionRestricted : (req, res) => {
+    res.send('success');
   }
-
 }
 
 module.exports = userController;

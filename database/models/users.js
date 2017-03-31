@@ -8,5 +8,10 @@ const UserSchema = new Schema({
     lowercase: true,
     unique: true,
     required: true 
+  },
+  hash: {
+  	type: String,
+  	unique: true,
+  	required: true
   }
 });
